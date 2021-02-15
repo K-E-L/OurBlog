@@ -15,8 +15,6 @@ class WelcomeController extends Controller
         // default: database
         $posts = Post::with(['creator'])->orderBy('created_at', 'DESC')->paginate(10, ["*"], 'posts');
 
-         // ->paginate(5, ["*"], "foo");
-        
         return view('dashboard', compact('posts'));
     }
 
