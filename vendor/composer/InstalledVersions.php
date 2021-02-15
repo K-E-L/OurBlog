@@ -25,12 +25,12 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => 'c7398d85eb50c73a71ce8d512b6804a1e8d02231',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -43,6 +43,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '8d8f88b3b3830916be94292c1fbce84433efb1aa',
+    ),
+    'barryvdh/laravel-debugbar' => 
+    array (
+      'pretty_version' => 'v3.5.2',
+      'version' => '3.5.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'cae0a8d1cb89b0f0522f65e60465e16d738e069b',
     ),
     'brick/math' => 
     array (
@@ -473,12 +482,12 @@ private static $installed = array (
     ),
     'laravel/laravel' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => 'c7398d85eb50c73a71ce8d512b6804a1e8d02231',
     ),
     'laravel/sail' => 
     array (
@@ -524,6 +533,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '3b9dff8aaf7323590c1d2e443db701eb1f9aa0d3',
+    ),
+    'maximebf/debugbar' => 
+    array (
+      'pretty_version' => 'v1.16.5',
+      'version' => '1.16.5.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '6d51ee9e94cff14412783785e79a4e7ef97b9d62',
     ),
     'mockery/mockery' => 
     array (
@@ -1019,6 +1037,15 @@ private static $installed = array (
       array (
       ),
       'reference' => 'f65f217b3314504a1ec99c2d6ef69016bb13490f',
+    ),
+    'symfony/debug' => 
+    array (
+      'pretty_version' => 'v4.4.19',
+      'version' => '4.4.19.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'af4987aa4a5630e9615be9d9c3ed1b0f24ca449c',
     ),
     'symfony/deprecation-contracts' => 
     array (

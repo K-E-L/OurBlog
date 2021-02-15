@@ -22,10 +22,7 @@ class PostController extends Controller
             'creator_id' => $user->id,
         ]);
 
-        // get: return params
-        $posts = Post::all();
-
-        return view('dashboard', compact('posts'));
+        return redirect('/');
     }
 
     public function destroy(Post $post)
@@ -36,10 +33,7 @@ class PostController extends Controller
         
         Post::destroy($post->id);
 
-        // get: return params
-        $posts = Post::all();
-
-        return view('dashboard', compact('posts'));
+        return redirect('/');
     }
     
     
@@ -54,19 +48,12 @@ class PostController extends Controller
 
         // authentication: backend
         if ($user->id !== $post->creator->id)
-            return view('dashboard', compact('posts'));
+            return redirect('/');
 
         $post->body = request('body');
         $post->save();
 
-        // get: return params
-        $posts = Post::all();
-
-        return view('dashboard', compact('posts'));
-    }
-
-    public function hello() {
-        dd('here');
+        return redirect('/');
     }
     
 }
