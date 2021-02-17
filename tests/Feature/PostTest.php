@@ -15,14 +15,15 @@ class PostTest extends TestCase
     
     public function testAUserCanCreateAPost()
     {
-        $this->actingAs(User::factory()->create());
+        $user = User::factory()->create();
+        $this->actingAs($user);
 
         $response = $this->post('/posts/create', [
             'body' => 'some post'
         ]);
 
         // assert: a post has been created
-        $this->assertCount(1, Post::all());
+        $this->assertCount(1, $user->posts);
     }
     
     public function testAUserCanViewTheirOwnPost()
@@ -64,7 +65,7 @@ class PostTest extends TestCase
     {
         $user = User::factory()->create();
         $this->actingAs($user);
-
+        
         $response = $this->post('/posts/create', [
             'body' => 'some post'
         ]);
@@ -76,7 +77,7 @@ class PostTest extends TestCase
 
         $response = $this->post('/posts/' . $post->id .  '/destroy');
 
-        // assert: a post has been destroyed
+        // assert: the post has been destroyed 
         $this->assertDeleted($post);
     }
 
