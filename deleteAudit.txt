@@ -1,0 +1,14 @@
+Audit to DELETE a Post:
+
+./resources/views/dashboard.blade.php
+I like how on line 22 you only make the delete button visible if the authenticated user is also the creator. Maybe consider how removing this button will affect styling however.
+
+./routes/web.php
+Destroy method is clean and needs no refactoring
+
+./app/Http/Controllers/PostController.php
+Line 28 for the destroy method. Be consistent on whether to say destroy or to say delete. Destroy is more in line with laravel while delete is more in line with the requirements. You decide. Another validation check might not be necessary. It is necessary for the tests later on, but will be hard to get to the condition if the blades are stopping it. More research is needed on whether laravel blades can be easily hacked around. Return style suitable for this function.
+
+./tests/Feature/PostTest.php
+From Line 67, skipping the first assert that the user has no previous posts is alright since that was tested in the create a post test. Last line of the function however, is unlike the first assert. Consider having an assertCount of 0 even though this seems less accurate than the assert of it being deleted. Multiple user delete test looks good.
+

@@ -14,28 +14,24 @@ class PostController extends Controller
             'body' => 'required',
         ]);
 
-        // get: params
-        $user = Auth::User();
-
         $post = Post::create([
             'body' => request('body'),
-            'creator_id' => $user->id,
+            'creator_id' => Auth::User()->id,
         ]);
 
-        return redirect('/');
+        return redirect('/');        
     }
 
     public function destroy(Post $post)
     {
         // authentication: backend
         if (Auth::User()->id !== $post->creator->id)
-            return view('dashboard', compact('posts'));
+            return redirect('/');
         
         Post::destroy($post->id);
 
         return redirect('/');
     }
-    
     
     public function edit(Post $post)
     {
@@ -43,11 +39,8 @@ class PostController extends Controller
             'body' => 'required',
         ]);
 
-        // get: params
-        $user = Auth::User();
-
         // authentication: backend
-        if ($user->id !== $post->creator->id)
+        if (Auth::User()->id !== $post->creator->id)
             return redirect('/');
 
         $post->body = request('body');
