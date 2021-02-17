@@ -70,7 +70,7 @@ class PostTest extends TestCase
         ]);
         
         // assert: a post has been created
-        $this->assertCount(1, Post::all());
+        $this->assertCount(1, $user->posts);
 
         $post = $user->posts->first();
 
@@ -93,9 +93,9 @@ class PostTest extends TestCase
         ]);
 
         // assert: user2 created a post
-        $this->assertCount(1, Post::all());
+        $this->assertCount(1, $user2->posts);
 
-        $post = $user2->posts->first();
+        $post = $user2->posts->last();
 
         $this->actingAs($user);
 
@@ -118,16 +118,16 @@ class PostTest extends TestCase
         ]);
 
         // assert: a post has been created
-        $this->assertCount(1, Post::all());
+        $this->assertCount(1, $user->posts);
 
-        $post = $user->posts->first();
+        $post = $user->posts->last();
 
         $response = $this->post('/posts/'. $post->id . '/edit', [
             'body' => 'some edited post'
         ]);
 
         // assert: the post still exists and has the edited body
-        $this->assertCount(1, Post::all());
+        $this->assertCount(1, $user->posts);
         $this->assertDatabaseHas('posts', [
             'id' => $post->id,
             'body' => 'some edited post',
@@ -147,9 +147,9 @@ class PostTest extends TestCase
         ]);
 
         // assert: user2 created a post
-        $this->assertCount(1, Post::all());
+        $this->assertCount(1, $user2->posts);
 
-        $post = $user2->posts->first();
+        $post = $user2->posts->last();
 
         $this->actingAs($user);
 
