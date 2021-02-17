@@ -8,10 +8,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                     <div class="inline-flex  w-full whitespace-pre-wrap font-bold">
-                        {{ $article->title }}
-                    </div>
-                    <div class="inline-flex  w-full whitespace-pre-wrap">
-                        {{ $article->source }}                    
+                        <a href="{{ $article->source }}">{{ $article->title }}</a>
                     </div>
 
                     <div class="inline-flex  w-full whitespace-pre-wrap">
