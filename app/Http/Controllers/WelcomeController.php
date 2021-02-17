@@ -13,7 +13,7 @@ class WelcomeController extends Controller
 {
     public function index() {
         // default: database
-        $posts = Post::with(['creator'])->orderBy('created_at', 'DESC')->paginate(10, ["*"], 'posts');
+        $posts = Post::with(['creator'])->orderBy('created_at', 'DESC')->paginate(5, ["*"], 'posts');
 
         return view('dashboard', compact('posts'));
     }
