@@ -47,5 +47,7 @@ class WelcomeTest extends TestCase
         $view->assertSee('some article 2');
         $view->assertSee('some article 3');
      }
+
+    
     
 }
