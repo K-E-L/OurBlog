@@ -7,11 +7,11 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-                    <div class="inline-flex  w-full whitespace-pre-wrap font-bold">
+                    <div class="inline-flex w-full whitespace-pre-wrap font-bold">
                         <a href="{{ $article->source }}">{{ $article->title }}</a>
                     </div>
 
-                    <div class="inline-flex  w-full whitespace-pre-wrap">
+                    <div class="inline-flex w-full whitespace-pre-wrap">
                         {{ $article->body }}  
                     </div>
                 </div>

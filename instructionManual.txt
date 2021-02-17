@@ -2,6 +2,6 @@ Instruction Manual:
 
 By default, the root of the page is the login page. If you do not have an account, click on the Register link on the bottom left hand side of the login form. After you enter in your information into the registration form, you will be logged in. Make sure you enter a valid email and a password that is at least 8 characters long. To log out, click on your name in the upper right-hand corner and then click Logout. 
 
-After logging in, post something by typing into the box that has been automatically highlighted for you and press submit. You will see your post appear below. Notice that if you press the Delete button on that specific post, the post is deleted. If you want to edit a post, first edit the post and then press Edit. Notice after 10 posts, links to the overflow pages will appear in the bottom right hand corner. When other people post, you will only be able to see them without being able to edit or delete.
+After logging in, post something by typing into the box that has been automatically highlighted for you and press submit. You will see your post appear below. Notice that if you press the Delete button on that specific post, the post is deleted. If you want to edit a post, first edit the post and then press Edit. Notice after 5 posts, links to the overflow pages will appear in the bottom right hand corner. When other people post, you will only be able to see them without being able to edit or delete.
 
 To view articles, press on the Articles tab on the right side of the already highlighted Posts tab.
